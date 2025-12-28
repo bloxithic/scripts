@@ -1,4 +1,6 @@
-print("anti friend enabled")
+print("anti friend and auto speed hub enabled")
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
 
 local function hop()
 	game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
@@ -18,6 +20,6 @@ end)
 
 game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(state)
 	if state == Enum.TeleportState.Started then
-		syn.queue_on_teleport()
+		queue_on_teleport(loadstring(game:HttpGet("https://raw.githubusercontent.com/bloxithic/scripts/refs/heads/main/antifriend.lua"))())
 	end
 end)
